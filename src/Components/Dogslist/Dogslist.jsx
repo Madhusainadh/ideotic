@@ -33,7 +33,7 @@ const Dogslist = () => {
     setloading(true)
     try{
         
-        let { data } = await axios.get("http://localhost:5000/list");
+        let { data } = await axios.get("https://ideoticbackend-production.up.railway.app/list");
         setdata(data);
         
         setloading(false)

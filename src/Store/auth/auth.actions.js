@@ -10,7 +10,7 @@ export const LOGOUT = "/auth/logout";
 export const loginUser = (creds) => async (dispatch) => {
     dispatch({ type: LOADING });
     try{
-        let res = await axios.post('http://localhost:5000/users/login',creds);
+        let res = await axios.post('https://ideoticbackend-production.up.railway.app/users/login',creds);
         dispatch({type:LOGIN,payload:res.data});
         console.log(res);
     }
@@ -23,7 +23,7 @@ export const loginUser = (creds) => async (dispatch) => {
 export const signupUser = (creds) => async (dispatch) => {
     dispatch({ type: LOADING });
     try{
-        let res = await axios.post('http://localhost:5000/users/signup',creds);
+        let res = await axios.post('https://ideoticbackend-production.up.railway.app/users/signup',creds);
         dispatch({type:SIGNUP,payload:res.data});
         console.log(res.data);
     }
